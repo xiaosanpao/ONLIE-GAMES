@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess.com | Play Chess Online Against AI and Friends</title>
+    <meta name="description" content="Play chess online for free on Chess.com. Challenge the AI, improve your skills, and enjoy the world's most strategic board game anytime, anywhere.">
+    <link rel="canonical" href="https://chess.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --apple-blue: #007AFF;
+            --apple-green: #34C759;
+            --apple-orange: #FF9500;
+            --apple-red: #FF3B30;
+            --apple-purple: #AF52DE;
+            --apple-grey: #8E8E93;
+            --apple-dark: #1D1D1F;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--apple-dark);
+        }
+        
+        .chess-container {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .apple-button {
+            background-color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .apple-button:hover {
+            background-color: #0062cc;
+            transform: translateY(-2px);
+        }
+        
+        .secondary-button {
+            background-color: var(--apple-grey);
+            transition: all 0.3s ease;
+        }
+        
+        .secondary-button:hover {
+            background-color: #6e6e73;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            border-left: 4px solid var(--apple-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:nth-child(2) {
+            border-left: 4px solid var(--apple-green);
+        }
+        
+        .feature-card:nth-child(3) {
+            border-left: 4px solid var(--apple-orange);
+        }
+        
+        .feature-card:nth-child(4) {
+            border-left: 4px solid var(--apple-red);
+        }
+        
+        .feature-card:nth-child(5) {
+            border-left: 4px solid var(--apple-purple);
+        }
+        
+        .chessboard-pattern {
+            background-color: #f5f5f7;
+            background-image: 
+                linear-gradient(45deg, #e6e6e6 25%, transparent 25%), 
+                linear-gradient(-45deg, #e6e6e6 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #e6e6e6 75%), 
+                linear-gradient(-45deg, transparent 75%, #e6e6e6 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <a href="./index.html" class="flex items-center">
+                    <span class="text-2xl font-bold text-black">Back to Home</span>
+                </a>
+                <a href="./index.html" class="btn-primary px-4 py-2 rounded-lg text-white font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#play" class="text-gray-600 hover:text-[#007AFF] font-medium">Play Now</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-[#007AFF] font-medium">About</a></li>
+                    <li><a href="#learn" class="text-gray-600 hover:text-[#007AFF] font-medium">Learn</a></li>
+                    <li><a href="#strategy" class="text-gray-600 hover:text-[#007AFF] font-medium">Strategy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-16 md:py-24 overflow-hidden chessboard-pattern">
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Master the Game of Chess</h1>
+                    <p class="text-xl md:text-2xl text-gray-700 mb-8">Challenge your mind with the ultimate strategic board game – play against AI or friends online from anywhere.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#play" class="apple-button px-8 py-4 text-white font-semibold rounded-lg text-center">
+                            Play Now
+                        </a>
+                        <a href="#learn" class="secondary-button px-8 py-4 text-white font-semibold rounded-lg text-center">
+                            Learn Chess
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="play" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Play Chess Online</h2>
+                <div class="chess-container max-w-4xl mx-auto bg-white p-4 md:p-6">
+                    <iframe src="https://org976fakamjp.jagranplay.com/ai-chess.html" 
+                            title="Play Chess Online Against AI"
+                            class="w-full h-[500px] md:h-[600px] border-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600 mb-4">Playing against our AI chess engine. You can adjust difficulty in the game settings.</p>
+                        <a href="#strategy" class="apple-button inline-block px-6 py-3 text-white font-medium rounded-lg">
+                            Chess Strategy Tips
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Chess Section -->
+        <section id="about" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">About Chess</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+                    <p class="mb-4 text-lg">Chess is a two-player strategy board game played on a checkered board with 64 squares arranged in an 8×8 grid. Each player begins with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns.</p>
+                    
+                    <p class="mb-4 text-lg">The game captures the essence of medieval warfare, where the goal is to checkmate your opponent's king by placing it under an inescapable threat of capture. Along with Go, chess is one of the world's most ancient and enduring games of pure strategy.</p>
+                    
+                    <p class="mb-4 text-lg">Chess requires and develops concentration, critical thinking, abstract reasoning, problem solving, pattern recognition, strategic planning, creativity, and evaluation – making it not just a game but a valuable mental exercise.</p>
+                    
+                    <p class="text-lg">Our online platform allows you to play chess anytime, anywhere, against our sophisticated AI opponent. Whether you're a beginner learning the rules or a seasoned player honing your skills, Chess.com provides the perfect environment to enjoy this timeless game.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Why Play Chess Online</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#007AFF]">AI Opponent</h3>
+                        <p>Challenge our adaptive AI that adjusts to your skill level for the perfect chess match every time.</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#34C759]">Improve Your Skills</h3>
+                        <p>Track your progress, analyze your games, and watch your chess rating grow as you play.</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#FF9500]">Play Anywhere</h3>
+                        <p>Enjoy chess on any device with our responsive design that works on desktop, tablet, and mobile.</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#FF3B30]">Learn Strategy</h3>
+                        <p>Access tutorials and tips to understand openings, tactics, and endgame techniques.</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#AF52DE]">Train Your Brain</h3>
+                        <p>Enhance cognitive skills like memory, focus, and logical thinking through regular chess practice.</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2 text-[#8E8E93]">No Setup Required</h3>
+                        <p>Start playing immediately without physical pieces, board setup, or finding an opponent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn Chess Section -->
+        <section id="learn" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Learn Chess Basics</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4">Chess Pieces and Movements</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">King:</span>
+                            <span>Moves one square in any direction. The most important piece – when it's in checkmate, you lose.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">Queen:</span>
+                            <span>The most powerful piece, moving any number of squares diagonally, horizontally, or vertically.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">Rook:</span>
+                            <span>Moves any number of squares horizontally or vertically. Great for controlling files and ranks.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">Bishop:</span>
+                            <span>Moves any number of squares diagonally, always staying on the same color square.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">Knight:</span>
+                            <span>Moves in an L-shape: two squares in one direction and then one square perpendicular. Can jump over pieces.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-bold mr-2">Pawn:</span>
+                            <span>Moves forward one square (or two on its first move), but captures diagonally. Can be promoted when reaching the opposite end.</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Basic Rules</h3>
+                    <ol class="list-decimal pl-6 space-y-3 mb-6">
+                        <li>White always moves first.</li>
+                        <li>Players take turns making one move at a time.</li>
+                        <li>A piece is captured when an opponent's piece moves to its square.</li>
+                        <li>The king can never be captured, only put in check.</li>
+                        <li>If your king is in check, you must get out of check on your next move.</li>
+                        <li>Checkmate occurs when a king is in check and cannot escape, ending the game.</li>
+                        <li>Stalemate occurs when a player has no legal moves but their king is not in check, resulting in a draw.</li>
+                    </ol>
+                    
+                    <div class="text-center mt-8">
+                        <a href="#play" class="apple-button inline-block px-6 py-3 text-white font-medium rounded-lg">
+                            Start Playing Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Section -->
+        <section id="strategy" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Chess Strategy Tips</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4">Opening Principles</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li>Control the center of the board with pawns and pieces</li>
+                        <li>Develop your knights and bishops early</li>
+                        <li>Castle early to protect your king</li>
+                        <li>Connect your rooks by clearing the back rank</li>
+                        <li>Avoid moving the same piece multiple times in the opening</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Middle Game Tactics</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li>Look for forks, pins, and skewers</li>
+                        <li>Create and exploit weaknesses in your opponent's position</li>
+                        <li>Maintain piece coordination and activity</li>
+                        <li>Balance attack and defense</li>
+                        <li>Plan several moves ahead when possible</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Endgame Essentials</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li>Activate your king in the endgame</li>
+                        <li>Push passed pawns toward promotion</li>
+                        <li>Know basic checkmate patterns (K+Q vs K, K+R vs K)</li>
+                        <li>Understand the opposition concept with kings</li>
+                        <li>Create zugzwang positions when possible</li>
+                    </ul>
+                    
+                    <div class="p-4 bg-gray-50 rounded-lg mt-6">
+                        <p class="italic text-gray-600">"Chess is not about winning, it's about learning. Every game is an opportunity to improve your understanding." – Chess.com</p>
+                    </div>
+                    
+                    <div class="text-center mt-8">
+                        <a href="#play" class="apple-button inline-block px-6 py-3 text-white font-medium rounded-lg">
+                            Apply These Strategies
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Chess History</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+                    <p class="mb-4">Chess originated in northern India during the Gupta Empire around the 6th century AD, where it was known as "chaturanga." From India, the game spread to Persia, where it evolved and became known as "shatranj."</p>
+                    
+                    <p class="mb-4">After the Islamic conquest of Persia, chess spread to the Muslim world and subsequently to Southern Europe. By the 15th century, the game had largely evolved into its current form, with the major adjustments being the addition of the queen's expanded movement capabilities.</p>
+                    
+                    <p class="mb-4">The first modern chess tournament was held in London in 1851, won by Adolf Anderssen. The first official World Chess Championship match was held in 1886, where Wilhelm Steinitz defeated Johannes Zukertort to become the first undisputed World Chess Champion.</p>
+                    
+                    <p>Chess reached a new milestone in 1997 when IBM's Deep Blue computer defeated World Champion Garry Kasparov. Today, chess continues to evolve both as a competitive sport and a recreational activity, with millions of players worldwide and advanced AI opponents available online.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Chess.com</h3>
+                    <p class="text-gray-400 mb-4">The #1 site for online chess, providing a platform for players of all skill levels to play, learn, and improve.</p>
+                    <p class="text-gray-400">© 2025 Chess.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#play" class="text-gray-400 hover:text-white">Play Chess</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Chess</a></li>
+                        <li><a href="#learn" class="text-gray-400 hover:text-white">Learn Chess</a></li>
+                        <li><a href="#strategy" class="text-gray-400 hover:text-white">Chess Strategies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <p class="text-gray-400 mb-2">Follow us on social media for chess tips, puzzles, and news from the chess world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple script for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

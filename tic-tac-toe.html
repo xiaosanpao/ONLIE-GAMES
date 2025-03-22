@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tic-Tac-Toe Online - Free Browser Game | tic-tac-toe.html.com</title>
+    <meta name="description" content="Play the classic game of Tic-Tac-Toe online for free in your browser. Challenge friends or play against the computer in this timeless strategy game.">
+    <link rel="canonical" href="https://tic-tac-toe.html.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #8E8E93;
+            --apple-green: #34C759;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .game-cell {
+            width: 120px;
+            height: 120px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            color: white;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .game-cell:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            gap: 10px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <script>
+        let currentPlayer = 'X';
+        let gameBoard = ['', '', '', '', '', '', '', '', ''];
+        let gameActive = true;
+
+        function makeMove(cell) {
+            const index = Array.from(cell.parentElement.children).indexOf(cell);
+            if (gameBoard[index] === '' && gameActive) {
+                gameBoard[index] = currentPlayer;
+                cell.textContent = currentPlayer;
+                cell.style.color = currentPlayer === 'X' ? '#FFD700' : '#00FF88';
+                if (checkWin()) {
+                    setTimeout(() => {
+                        alert(`Player ${currentPlayer} wins!`);
+                        gameActive = false;
+                    }, 100);
+                    return;
+                }
+                if (gameBoard.every(cell => cell !== '')) {
+                    setTimeout(() => {
+                        alert("It's a draw!");
+                        gameActive = false;
+                    }, 100);
+                    return;
+                }
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                document.getElementById('current-player').textContent = currentPlayer;
+            }
+        }
+
+        function checkWin() {
+            const winConditions = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                [0, 4, 8], [2, 4, 6] // Diagonals
+            ];
+            return winConditions.some(condition => {
+                return condition.every(index => {
+                    return gameBoard[index] === currentPlayer;
+                });
+            });
+        }
+
+        function restartGame() {
+            gameBoard = ['', '', '', '', '', '', '', '', ''];
+            gameActive = true;
+            currentPlayer = 'X';
+            document.getElementById('current-player').textContent = currentPlayer;
+            document.querySelectorAll('.game-cell').forEach(cell => {
+                cell.textContent = '';
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mb-4">
+            <a href="./index.html" class="inline-block px-6 py-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg text-white transition-all">
+                ← Back
+            </a>
+        </div>
+        
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white mb-4">Tic-Tac-Toe</h1>
+            <p class="text-xl text-white text-opacity-80">Challenge your strategic thinking in this classic game</p>
+        </header>
+
+        <main class="text-center">
+            <div class="game-board mx-auto">
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+                <div class="game-cell" data-cell onclick="makeMove(this)"></div>
+            </div>
+            
+
+            <div class="mb-8">
+                <p class="text-xl mb-4 text-white">Current Player: <span id="current-player" class="font-bold">X</span></p>
+                <button id="restart" class="px-8 py-3 bg-white bg-opacity-20 text-white rounded-lg hover:bg-opacity-30 transition-all transform hover:scale-105" onclick="restartGame()">
+                    Restart Game
+                </button>
+            </div>
+
+            <section class="space-y-8 text-left max-w-2xl mx-auto">
+                <div>

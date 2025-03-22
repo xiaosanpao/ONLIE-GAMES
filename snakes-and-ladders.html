@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes and Ladders Online Game | Play Classic Board Game Free</title>
+    <meta name="description" content="Play the classic Snakes and Ladders board game online for free. Enjoy this family-friendly game of luck and adventure on any device!">
+    <link rel="canonical" href="https://snakes-and-ladders.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+        
+        :root {
+            --apple-blue: #007AFF;
+            --apple-green: #34C759;
+            --apple-orange: #FF9500;
+            --apple-red: #FF3B30;
+            --apple-purple: #AF52DE;
+            --apple-grey: #8E8E93;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .game-container {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .apple-button {
+            background-color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .apple-button:hover {
+            background-color: #0062cc;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            border-left: 4px solid var(--apple-green);
+        }
+        
+        .feature-card:nth-child(2) {
+            border-left: 4px solid var(--apple-orange);
+        }
+        
+        .feature-card:nth-child(3) {
+            border-left: 4px solid var(--apple-red);
+        }
+        
+        .feature-card:nth-child(4) {
+            border-left: 4px solid var(--apple-purple);
+        }
+        
+        .return-button {
+            background-color: var(--apple-grey);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+        
+        .return-button:hover {
+            background-color: #6e6e73;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Return Button -->
+    <a href="./index.html" class="return-button flex items-center px-4 py-2 text-white font-medium rounded-lg shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Return to Home
+    </a>
+
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <a href="/" class="text-2xl font-bold text-[#007AFF]">Snakes and Ladders</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#play" class="text-gray-600 hover:text-[#007AFF]">Play Now</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-[#007AFF]">About</a></li>
+                    <li><a href="#instructions" class="text-gray-600 hover:text-[#007AFF]">How to Play</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Snakes and Ladders Online</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Roll the dice, climb the ladders, and watch out for sneaky snakes in this timeless game of luck and strategy!</p>
+        </section>
+
+        <section id="play" class="mb-16">
+            <div class="game-container bg-white p-4 md:p-6 max-w-4xl mx-auto">
+                <iframe src="https://org976fakamjp.jagranplay.com/snakes-and-ladders.html" 
+                        title="Play Snakes and Ladders Online"
+                        class="w-full h-[500px] md:h-[600px] border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+                <div class="mt-4 text-center">
+                    <a href="#instructions" class="apple-button inline-block px-6 py-3 text-white font-medium rounded-lg">
+                        How to Play
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">About Snakes and Ladders</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <p class="mb-4">Snakes and Ladders is a classic board game that has entertained families for generations. Originating in ancient India as "Moksha Patam," this game of luck has evolved into a worldwide favorite that combines simplicity with excitement.</p>
+                <p class="mb-4">The game is played on a grid of squares, typically numbered from 1 to 100. Players roll a dice to move their tokens along the board, with the goal of reaching the final square before their opponents. The twist comes from the ladders, which provide shortcuts up the board, and the snakes, which send players sliding back down.</p>
+                <p>Our online version brings this timeless classic to your digital devices, allowing you to enjoy Snakes and Ladders anytime, anywhere, without needing a physical board or dice.</p>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">Game Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-2 text-[#34C759]">Family Friendly</h3>
+                    <p>Perfect for players of all ages, from children to adults, making it an ideal family game night option.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-2 text-[#FF9500]">Easy to Learn</h3>
+                    <p>Simple rules that anyone can pick up in seconds, but gameplay that remains engaging for hours.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-2 text-[#FF3B30]">No Downloads Required</h3>
+                    <p>Play directly in your browser without installing any apps or software on your device.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-2 text-[#AF52DE]">Multi-device Support</h3>
+                    <p>Enjoy on desktop, tablet, or mobile with a responsive design that adapts to your screen size.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructions" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">How to Play</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <ol class="list-decimal pl-6 space-y-4">
+                    <li>
+                        <strong>Starting the Game:</strong> 
+                        <p>All players start at square 1, which is typically in the bottom left corner of the board.</p>
+                    </li>
+                    <li>
+                        <strong>Taking Turns:</strong> 
+                        <p>Players take turns rolling the dice and moving their token the corresponding number of squares.</p>
+                    </li>
+                    <li>
+                        <strong>Climbing Ladders:</strong> 
+                        <p>If a player lands on a square with the bottom of a ladder, they immediately climb to the square at the top of that ladder.</p>
+                    </li>
+                    <li>
+                        <strong>Sliding Down Snakes:</strong> 
+                        <p>If a player lands on a square with the head of a snake, they must slide down to the square at the tail of that snake.</p>
+                    </li>
+                    <li>
+                        <strong>Winning the Game:</strong> 
+                        <p>The first player to reach the final square (usually 100) wins the game. Note that you must roll the exact number needed to land on the final square.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="history" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">History of Snakes and Ladders</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <p class="mb-4">Snakes and Ladders has a rich history dating back to the 13th century in India, where it was known as "Moksha Patam" or "Gyan Chaupar." The game was originally designed to teach moral lessons, with ladders representing virtues and snakes representing vices.</p>
+                <p class="mb-4">The British brought the game to England in the late 19th century, where it was commercialized and renamed "Snakes and Ladders." The moral elements were removed, transforming it into the pure game of chance we know today.</p>
+                <p>Despite its simplicity, the game's perfect balance of luck, anticipation, and dramatic reversals of fortune has ensured its popularity for centuries across cultures worldwide.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-bold">Snakes and Ladders Online</p>
+                    <p class="text-sm text-gray-400">© 2025 snakes-and-ladders.com</p>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#play" class="text-gray-400 hover:text-white">Play Now</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#instructions" class="text-gray-400 hover:text-white">How to Play</a></li>
+                        <li><a href="./index.html" class="text-gray-400 hover:text-white">Return Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple script for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

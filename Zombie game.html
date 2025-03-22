@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineFun - Exciting Online Mining Adventure Game</title>
+    <meta name="description" content="Play MineFun, the thrilling online mining adventure game. Dig, collect resources, and build in this exciting multiplayer experience!">
+    <link rel="canonical" href="https://minefun.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#007AFF',
+                        'apple-green': '#34C759',
+                        'apple-red': '#FF3B30',
+                        'apple-gray': '#8E8E93',
+                        'apple-light-gray': '#F2F2F7',
+                        'apple-dark': '#1C1C1E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-apple-light-gray text-apple-dark font-sans min-h-screen">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <a href="./index.html" class="text-apple-blue hover:text-apple-red transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold text-center text-apple-blue">MineFun</h1>
+                <div class="w-6"></div> <!-- Spacer for layout balance -->
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12 text-center">
+            <p class="text-xl md:text-2xl mb-8 text-apple-dark">Explore, mine, and build in this exciting online multiplayer adventure!</p>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-5xl">
+                <div class="aspect-w-16 aspect-h-9 relative" style="padding-top: 56.25%;">
+                    <iframe 
+                        src="https://minefun.io/" 
+                        class="absolute inset-0 w-full h-full border-0"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Play MineFun Online"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">About MineFun</h2>
+            <div class="space-y-4 text-lg">
+                <p>MineFun is an engaging online multiplayer game that combines mining, crafting, and building elements in an immersive virtual world. Players can explore vast landscapes, dig for valuable resources, and create impressive structures alone or with friends.</p>
+                <p>With intuitive controls and endless possibilities, MineFun offers hours of entertainment for gamers of all ages. The game's blocky aesthetic and creative gameplay make it both accessible and deeply rewarding.</p>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold mb-6 text-apple-green">Game Features</h2>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-green mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Multiplayer mode with friends</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-green mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Unlimited world exploration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-green mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Resource gathering and crafting</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-green mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Build amazing structures</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold mb-6 text-apple-red">How to Play</h2>
+                <ol class="space-y-3 text-lg list-decimal pl-5">
+                    <li>Click the game window to activate controls</li>
+                    <li>Use WASD keys to move around the world</li>
+                    <li>Left-click to break blocks and collect resources</li>
+                    <li>Right-click to place blocks and build structures</li>
+                    <li>Press E to open your inventory and crafting menu</li>
+                    <li>Press T to chat with other players online</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Why Players Love MineFun</h2>
+            <div class="space-y-4 text-lg">
+                <p>MineFun stands out from other online games with its perfect balance of exploration, creativity, and social interaction. Whether you're a casual gamer looking for a fun way to pass time or a dedicated builder creating elaborate masterpieces, MineFun offers something for everyone.</p>
+                <p>The game regularly updates with new features, blocks, and gameplay elements to keep the experience fresh and exciting. Join thousands of players worldwide in this unique mining adventure!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-apple-dark text-white mt-12 py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-4">&copy; 2025 MineFun. All rights reserved.</p>
+                <p class="text-sm text-apple-gray">MineFun is not affiliated with Minecraft or Mojang AB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Additional styles for iframe responsiveness */
+        .aspect-w-16 {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .aspect-w-16 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</body>
+</html>

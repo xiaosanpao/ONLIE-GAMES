@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Vectaria - an exciting online multiplayer vector-based strategy game. Experience fast-paced gameplay in your browser!">
+    <meta name="keywords" content="Vectaria, online game, multiplayer game, strategy game, browser game">
+    <title>Vectaria - Exciting Vector-Based Strategy Game | Play Online</title>
+    <link rel="canonical" href="https://vectaria.com/game.html" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #8E8E93;
+            --apple-green: #34C759;
+            --apple-orange: #FF9500;
+            --apple-red: #FF3B30;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+        
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .apple-button {
+            background-color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .apple-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 640px) {
+            .game-container {
+                padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#007AFF]">Vectaria</h1>
+                <p class="text-lg text-gray-600 mt-1">Shape the battlefield, conquer the vector world</p>
+            </div>
+            <a href="./index.html" class="apple-button text-white px-4 py-2 rounded-md flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <div class="game-container shadow-xl rounded-lg overflow-hidden">
+                <iframe src="https://vectaria.io/home" class="game-iframe" title="Play Vectaria Online" allow="fullscreen" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-[#007AFF]">About Vectaria</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-lg mb-4">
+                    Vectaria is a cutting-edge multiplayer strategy game where players compete in a dynamic vector-based world. 
+                    Command your forces, expand your territory, and outmaneuver opponents through tactical gameplay.
+                </p>
+                <p class="mb-4">
+                    With its unique blend of strategy and fast-paced action, Vectaria offers an engaging gaming experience 
+                    directly in your browser - no downloads required.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12 grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-[#FF9500]">Game Features</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#FF9500] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Real-time multiplayer battles with players worldwide</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#FF9500] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Unique vector-based mechanics that create dynamic gameplay</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#FF9500] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Multiple game modes and strategic options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#FF9500] mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Cross-platform play - compete from any device</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-[#34C759]">How To Play</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li class="text-[#34C759] font-medium">
+                            <span class="text-gray-900 font-normal">Create your account or play as a guest</span>
+                        </li>
+                        <li class="text-[#34C759] font-medium">
+                            <span class="text-gray-900 font-normal">Choose your preferred game mode</span>
+                        </li>
+                        <li class="text-[#34C759] font-medium">
+                            <span class="text-gray-900 font-normal">Expand your territory by drawing vector lines</span>
+                        </li>
+                        <li class="text-[#34C759] font-medium">
+                            <span class="text-gray-900 font-normal">Capture regions and defend against opponents</span>
+                        </li>
+                        <li class="text-[#34C759] font-medium">
+                            <span class="text-gray-900 font-normal">Collect power-ups to gain advantages</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-[#FF3B30]">System Requirements</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4">
+                    Vectaria is designed to run smoothly on most modern devices. For the best experience, we recommend:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Desktop</h3>
+                        <ul class="space-y-2">
+                            <li>• Any modern browser (Chrome, Firefox, Safari, Edge)</li>
+                            <li>• Stable internet connection</li>
+                            <li>• 2GB RAM or higher</li>
+                            <li>• Any operating system that supports modern browsers</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Mobile</h3>
+                        <ul class="space-y-2">
+                            <li>• iOS 11+ or Android 7+</li>
+                            <li>• Safari (iOS) or Chrome (Android)</li>
+                            <li>• Stable internet connection</li>
+                            <li>• Touch screen for optimal control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold">Vectaria</h2>
+                    <p class="text-gray-400">© 2025 Vectaria. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-[#007AFF] transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-[#007AFF] transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-[#007AFF] transition-colors">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add any JavaScript functionality here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the game iframe loaded correctly
+            const gameFrame = document.querySelector('.game-iframe');
+            gameFrame.addEventListener('load', function() {
+                console.log('Game loaded successfully');
+            });
+            
+            // Add responsive behavior for mobile
+            function handleResponsive() {
+                const isMobile = window.innerWidth < 768;
+                // Additional responsive adjustments if needed
+            }
+            
+            window.addEventListener('resize', handleResponsive);
+            handleResponsive(); // Initial check
+        });
+    </script>
+</body>
+</html>
