@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play EvoWorld online - an exciting evolution-based multiplayer game where you grow and evolve in a dynamic ecosystem">
+    <title>EvoWorld - Evolution Multiplayer Game | Play Online Now</title>
+    <link rel="canonical" href="https://evoworld.com" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #F5F5F7;
+            --apple-dark-gray: #86868B;
+            --apple-black: #1D1D1F;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-gray);
+            color: var(--apple-black);
+        }
+        .apple-button {
+            background-color: var(--apple-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .apple-button:hover {
+            background-color: #0071EB;
+            transform: scale(1.02);
+        }
+        .game-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Back Button -->
+        <a href="./index.html" class="back-button mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+        </a>
+
+        <!-- Game Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">EvoWorld</h1>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">Experience evolution in real-time: survive, grow, and dominate the ecosystem.</p>
+        </header>
+
+        <!-- Game Container -->
+        <div class="game-container mb-10 bg-white">
+            <iframe src="https://evoworld.io/" width="100%" height="600" frameborder="0" allowfullscreen class="w-full h-[500px] md:h-[600px]"></iframe>
+        </div>
+
+        <!-- Game Information -->
+        <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-10">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">About EvoWorld</h2>
+            <p class="mb-6 text-gray-700">EvoWorld is an immersive multiplayer online game that simulates the process of evolution in a competitive ecosystem. Start as a simple organism and evolve into complex species by adapting to your environment and outcompeting other players.</p>
+            
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">How to Play</h2>
+            <div class="space-y-4 text-gray-700">
+                <p>1. <strong>Start Small:</strong> Begin as a basic organism with limited abilities.</p>
+                <p>2. <strong>Gather Resources:</strong> Consume elements in your environment to grow stronger.</p>
+                <p>3. <strong>Evolve:</strong> Develop new traits and abilities as you progress.</p>
+                <p>4. <strong>Compete:</strong> Challenge other players for dominance in the ecosystem.</p>
+                <p>5. <strong>Adapt:</strong> Respond to environmental changes to ensure your survival.</p>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-xl font-semibold mb-3">Real-Time Evolution</h2>
+                <p class="text-gray-700">Experience the thrill of adapting to changing environments and developing new traits to survive in this dynamic ecosystem.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-xl font-semibold mb-3">Multiplayer Interaction</h2>
+                <p class="text-gray-700">Compete or cooperate with players from around the world as you navigate the challenges of evolution together.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-xl font-semibold mb-3">Strategic Gameplay</h2>
+                <p class="text-gray-700">Make critical decisions about your evolutionary path that will determine your success in the EvoWorld universe.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h2 class="text-xl font-semibold mb-3">Stunning Visuals</h2>
+                <p class="text-gray-700">Immerse yourself in beautiful environments with smooth graphics that bring the evolutionary journey to life.</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mb-10">
+            <button class="apple-button text-lg" onclick="document.querySelector('iframe').focus()">
+                Play EvoWorld Now
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 mt-20">
+            <p>&copy; 2025 EvoWorld. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
