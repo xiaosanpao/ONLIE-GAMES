@@ -1,212 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-96FGLXLRL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-96FGLXLRL9');
-</script>  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playstore - Top Games</title>
-  <meta name="description" content="Explore top games and play online instantly.">
-  <link rel="canonical" href="https://abc-alphabet-game.online" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: linear-gradient(135deg, #f9c1ff 0%, #ffffff 100%);
-      color: #333;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      padding: 20px 0;
-    }
-    .logo {
-      max-width: 150px;
-    }
-    .games-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin: 50px 0;
-    }
-    .game-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 10px;
-      padding: 20px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .game-card:hover {
-      transform: translateY(-5px);
-    }
-    .game-icon {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 10px;
-      object-fit: contain;
-    }
-    .game-title {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .game-description {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 15px;
-    }
-    .play-button {
-      background-color: #e63946;
-      color: white;
-      border: none;
-      padding: 5px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-    .featured-section {
-      background: linear-gradient(135deg, #05103a 0%, #3a1c5a 100%);
-      padding: 50px 0;
-      color: white;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .featured-section h2 {
-      margin-bottom: 10px;
-    }
-    .featured-section p {
-      margin-bottom: 30px;
-      opacity: 0.8;
-    }
-    .featured-games {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .featured-game {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      text-align: left;
-    }
-    .featured-game-icon {
-      width: 50px;
-      height: 50px;
-      margin-right: 15px;
-      border-radius: 10px;
-    }
-    .featured-game-info h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-    .featured-game-info p {
-      font-size: 12px;
-      opacity: 0.7;
-      margin: 0;
-    }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 5px;
-    }
-    .tag {
-      font-size: 10px;
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 2px 6px;
-      border-radius: 10px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      color: #555;
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <!-- 修改图片文件夹路径为 images -->
-      <img src="./images/playlogo.jpeg" alt="Playstore Logo" class="logo">
-    </header>
-    
-    <div class="games-grid">
-      <!-- 示例游戏卡片：2048 TILE -->
-      <div class="game-card" onclick="window.location.href='./2048.html'">
-        <div class="game-icon" style="background-color: #f8b26a; display: flex; justify-content: center; align-items: center;">
-          <div style="font-weight: bold; font-size: 24px;">2048</div>
-        </div>
-        <div class="game-title">2048 TILE</div>
-        <div class="game-description">Can you reach 2048?</div>
-        <!-- 移除按钮上的 onclick，使用外层 div 的点击事件即可 -->
-        <button class="play-button">PLAY NOW</button>
-      </div>
-      
-      <!-- 其它游戏卡片...（同理调整图片路径及 onclick 逻辑） -->
-      
-      <!-- 示例：TETRIS -->
-      <div class="game-card" onclick="window.location.href='./tetris.html'">
-        <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
-          <div style="width: 70px; height: 70px; position: relative;">
-            <div style="position: absolute; width: 20px; height: 20px; border: 1px solid #000; top: 20px; left: 20px;"></div>
-            <div style="position: absolute; width: 20px; height: 20px; border: 1px solid #000; top: 40px; left: 20px;"></div>
-            <div style="position: absolute; width: 20px; height: 20px; background-color: #f8b26a; top: 40px; left: 40px;"></div>
-          </div>
-        </div>
-        <div class="game-title">TETRIS</div>
-        <div class="game-description">Stacking blocks to conquer the void</div>
-        <button class="play-button">PLAY NOW</button>
-      </div>
-    </div>
-    
-    <!-- Featured Section 示例 -->
-    <div class="featured-section">
-      <h2>Top Games on Playstore</h2>
-      <p>Where legends are made.</p>
-      
-      <div class="featured-games">
-        <!-- 示例：Featured Game -->
-        <div class="featured-game" onclick="window.location.href='./shooter.html'">
-          <img src="./images/shooter.jpg" alt="Shooter Game" class="featured-game-icon">
-          <div class="featured-game-info">
-            <h3>Kour</h3>
-            <p>Free Fire shooter game Poki</p>
-          </div>
-        </div>
-        <!-- 更多 Featured Game 卡片 ... -->
-      </div>
-    </div>
-    
-    <footer>
-      Copyright © 2025 Joyans Production Limited.
-    </footer>
-  </div>
-</body>
-</html>
+ <html lang="en">
+ <head>
+     <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-96FGLXLRL9"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-96FGLXLRL9');
+ </script>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Playstore - Top Games</title>
+     <style>
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: Arial, sans-serif;
+         }
+ 
+         body {
+             background: linear-gradient(135deg, #f9c1ff 0%, #ffffff 100%);
+             color: #333;
+         }
+ 
+         .container {
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 20px;
+         }
+ 
+         header {
+             text-align: center;
+             padding: 20px 0;
+         }
+ 
+         .logo {
+             max-width: 150px;
+         }
+ 
+         .games-grid {
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             gap: 20px;
+             margin-top: 50px;
+             margin-bottom: 50px;
+         }
+ 
+         .game-card {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+             background-color: rgba(255, 255, 255, 0.5);
+             border-radius: 10px;
+             padding: 20px;
+             transition: transform 0.3s;
+         }
+ 
+         .game-card:hover {
+             transform: translateY(-5px);
+         }
+ 
+         .game-icon {
+             width: 100px;
+             height: 100px;
+             margin-bottom: 10px;
+             object-fit: contain;
+         }
+ 
+         .game-title {
+             font-weight: bold;
+             margin-bottom: 5px;
+         }
+ 
+         .game-description {
+             font-size: 14px;
+             color: #555;
+             margin-bottom: 15px;
+         }
+ 
+         .play-button {
+             background-color: #e63946;
+             color: white;
+             border: none;
+             padding: 5px 15px;
+             border-radius: 5px;
+             cursor: pointer;
+             font-weight: bold;
+             text-transform: uppercase;
+             font-size: 12px;
+         }
+ 
+         .featured-section {
+             background: linear-gradient(135deg, #05103a 0%, #3a1c5a 100%);
+             padding: 50px 0;
+             color: white;
+             text-align: center;
+             margin-top: 50px;
+         }
+ 
+         .featured-section h2 {
+             margin-bottom: 10px;
+         }
+ 
+         .featured-section p {
+             margin-bottom: 30px;
+             opacity: 0.8;
+         }
+ 
+         .featured-games {
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             gap: 20px;
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 0 20px;
+         }
+ 
+         .featured-game {
+             background-color: rgba(255, 255, 255, 0.1);
+             border-radius: 10px;
+             padding: 20px;
+             display: flex;
+             align-items: center;
+             text-align: left;
+         }
+ 
+         .featured-game-icon {
+             width: 50px;
+             height: 50px;
+             margin-right: 15px;
+             border-radius: 10px;
+         }
+ 
+         .featured-game-info h3 {
+             font-size: 16px;
+             margin-bottom: 5px;
+         }
+ 
+         .featured-game-info p {
+             font-size: 12px;
+             opacity: 0.7;
+             margin: 0;
+         }
+ 
+         .tags {
+             display: flex;
+             flex-wrap: wrap;
+             margin-top: 5px;
+         }
+ 
+         .tag {
+             font-size: 10px;
+             background-color: rgba(255, 255, 255, 0.2);
+             padding: 2px 6px;
+             border-radius: 10px;
+             margin-right: 5px;
+             margin-bottom: 5px;
+         }
+ 
+         footer {
+             text-align: center;
+             padding: 20px;
+             font-size: 12px;
+             color: #555;
+             background-color: rgba(0, 0, 0, 0.05);
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <header>
+             <img src="./Image/playlogo.jpeg" alt="Playstore Logo" class="logo">
+         </header>
+ 
+         <div class="games-grid">
+             <!-- 2048 TILE -->
+             <div class="game-card" onclick="window.location.href='./2048.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: #f8b26a; display: flex; justify-content: center; align-items: center;">
+                     <div style="font-weight: bold; font-size: 24px;">2048</div>
+                 </div>
+                 <div class="game-title">2048 TILE</div>
+                 <div class="game-description">Can you reach 2048</div>
+                 <button class="play-button" onclick="window.location.href='./2048.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- EMOJI MATCH -->
+             <div class="game-card" onclick="window.location.href='./emoji-match.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 5px; background-color: white;">
+                     <div style="background-color: #f8b26a; border-radius: 50%; display: flex; justify-content: center; align-items: center;">😊</div>
+                     <div style="background-color: #f8b26a; border-radius: 50%; display: flex; justify-content: center; align-items: center;">😊</div>
+                     <div style="background-color: #f8b26a; border-radius: 50%; display: flex; justify-content: center; align-items: center;">😊</div>
+                     <div style="background-color: #f8b26a; border-radius: 50%; display: flex; justify-content: center; align-items: center;">😊</div>
+                 </div>
+                 <div class="game-title">EMOJI MATCH</div>
+                 <div class="game-description">Match your way to the top</div>
+                 <button class="play-button" onclick="window.location.href='./emoji-match.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- TETRIS -->
+             <div class="game-card" onclick="window.location.href='./tetris.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 70px; height: 70px; position: relative;">
+                         <div style="position: absolute; width: 20px; height: 20px; border: 1px solid #000; top: 20px; left: 20px;"></div>
+                         <div style="position: absolute; width: 20px; height: 20px; border: 1px solid #000; top: 40px; left: 20px;"></div>
+                         <div style="position: absolute; width: 20px; height: 20px; background-color: #f8b26a; top: 40px; left: 40px;"></div>
+                     </div>
+                 </div>
+                 <div class="game-title">TETRIS</div>
+                 <div class="game-description">Stacking blocks to conquer the void</div>
+                 <button class="play-button" onclick="window.location.href='./tetris.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- TIC-TAC-TOE -->
+             <div class="game-card" onclick="window.location.href='./tic-tac-toe.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 70px; height: 70px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 5px;">
+                         <div style="background-color: white; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">O</div>
+                         <div style="background-color: #f8b26a; display: flex; justify-content: center; align-items: center;">X</div>
+                         <div style="background-color: #f8b26a; display: flex; justify-content: center; align-items: center;">X</div>
+                         <div style="background-color: white; border: 1px solid #000; display: flex; justify-content: center; align-items: center;">O</div>
+                     </div>
+                 </div>
+                 <div class="game-title">TIC-TAC-TOE</div>
+                 <div class="game-description">A timeless battle of X's and O's</div>
+                 <button class="play-button" onclick="window.location.href='./tic-tac-toe.html'">PLAY NOW</button>
+             </div>
+             <!-- QUIZ -->
+             <div class="game-card" onclick="window.location.href='./quiz.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center; border: 1px solid #ddd;">
+                     <div style="width: 60px; height: 60px; position: relative;">
+                         <div style="position: absolute; width: 50px; height: 50px; border: 2px solid #000; display: flex; justify-content: center; align-items: center; background-color: #f9f9f9;">
+                             <div style="width: 30px; height: 30px; background-color: #f8b26a; display: flex; justify-content: center; align-items: center;">?</div>
+                         </div>
+                         <div style="position: absolute; width: 15px; height: 15px; background-color: white; border: 1px solid #000; bottom: 0; right: 0; display: flex; justify-content: center; align-items: center;">
+                             <div style="width: 10px; height: 10px; background-color: #333;"></div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="game-title">QUIZ</div>
+                 <div class="game-description">Challenge your brain</div>
+                 <button class="play-button" onclick="window.location.href='./quiz.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- SNAKES AND LADDERS -->
+             <div class="game-card" onclick="window.location.href='./snakes-and-ladders.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 70px; height: 70px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 2px;">
+                         <div style="background-color: #f8b26a;"></div>
+                         <div style="background-color: white;"></div>
+                         <div style="background-color: #f8b26a;"></div>
+                         <div style="background-color: white;"></div>
+                         <div style="background-color: #f8b26a;"></div>
+                         <div style="background-color: white;"></div>
+                         <div style="background-color: #f8b26a;"></div>
+                         <div style="background-color: white;"></div>
+                         <div style="background-color: #f8b26a;"></div>
+                     </div>
+                 </div>
+                 <div class="game-title">SNAKE'S AND LADDERS</div>
+                 <div class="game-description">Climb high, fall low</div>
+                 <button class="play-button" onclick="window.location.href='./snakes-and-ladders.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- CHESS -->
+             <div class="game-card" onclick="window.location.href='./ai-chess.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 70px; height: 70px; position: relative;">
+                         <div style="position: absolute; width: 30px; height: 30px; background-color: #f8d3a8; top: 10px; left: 10px; display: flex; justify-content: center; align-items: center;">♞</div>
+                         <div style="position: absolute; width: 30px; height: 30px; background-color: #f8d3a8; top: 30px; left: 30px; display: flex; justify-content: center; align-items: center;">♟</div>
+                     </div>
+                 </div>
+                 <div class="game-title">CHESS</div>
+                 <div class="game-description">Think before you move</div>
+                 <button class="play-button" onclick="window.location.href='./ai-chess.html'">PLAY NOW</button>
+             </div>
+ 
+             <!-- COLORON -->
+             <div class="game-card" onclick="window.location.href='./coloron.html'" style="cursor: pointer;">
+                 <div class="game-icon" style="background-color: white; display: flex; justify-content: center; align-items: center;">
+                     <div style="width: 70px; height: 70px; display: flex; justify-content: space-between; align-items: flex-end;">
+                         <div style="width: 20px; height: 40px; background-color: #f8b26a;"></div>
+                         <div style="width: 20px; height: 60px; background-color: #f8b26a;"></div>
+                         <div style="width: 20px; height: 30px; background-color: #f8b26a;"></div>
+                     </div>
+                 </div>
+                 <div class="game-title">COLORON</div>
+                 <div class="game-description">A colorful challenge for quick minds</div>
+                 <button class="play-button" onclick="window.location.href='./coloron.html'">PLAY NOW</button>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Featured Games Section with Dark Background -->
+     <div class="featured-section">
+         <h2>Top Games on Playstore</h2>
+         <p>Where legends are made.</p>
+ 
+         <div class="featured-games">
+             <!-- Free Fire MAX -->
+             <div class="featured-game" onclick="window.location.href='./shooter.html'" style="cursor: pointer;">
+                 <img src="./Image/shooter.jpg" alt="Free Fire MAX" class="featured-game-icon">
+                 <div class="featured-game-info">
+                     <h3>Kour</h3>
+                     <p>Free Fire shooter game Poki </p>
+                 </div>
+             </div>
+ 
+             <!-- Free Fire MAX -->
+             <div class="featured-game" onclick="window.location.href='./Zombie game.html'" style="cursor: pointer;">
+                 <img src="./Image/Zombie game.png" alt="Free Fire MAX" class="featured-game-icon">
+                 <div class="featured-game-info">
+                     <h3>MineFun</h3>
+                     <p>Zombie game </p>
+                 </div>
+             </div>
+             <!-- Free Fire MAX -->
+             <div class="featured-game" onclick="window.location.href='./Vectaria.html'" style="cursor: pointer;">
+                 <img src="./Image/Vectaria.png" alt="Free Fire MAX" class="featured-game-icon">
+                 <div class="featured-game-info">
+                     <h3>Vectaria</h3>
+                     <p>Vectaria is one of our top picks for multiplayer</p>
+                 </div>
+             </div>
+             <!-- Free Fire MAX -->
+             <div class="featured-game" onclick="window.location.href='./evoWorld.html'" style="cursor: pointer;">
+                 <img src="./Image/EvoWorld.png" alt="Free Fire MAX" class="featured-game-icon">
+                 <div class="featured-game-info">
+                     <h3>evoworld</h3>
+                     <p>is one of our top picks. </p>
+                 </div>
+             </div>
+ 
+ 
+         </div>
+     </div>
+ 
+     <footer>
+         Copyright © 2025 Joyans Production Limited.
+     </footer>
+ </body>
+ </html>
